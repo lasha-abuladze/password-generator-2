@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(./fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #08070B;
+  color: #E6E5EA;
+  font-family: "JetBrains Mono";
+  padding: 64px 16px;
+  box-sizing: border-box;
+}
+
+.main-section {
+  max-width: 540px;
+  margin: auto;
+  text-align: center;
+}
+.main-section .main-header {
+  margin-bottom: 16px;
+}
+.main-section .main-header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #817D92;
+  margin-bottom: 16px;
+}
+.main-section .main-header .generated-password--container {
+  display: flex;
+  flex-direction: row;
+  background-color: #24232C;
+  padding: 17px 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-section .main-header .generated-password--container p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #E6E5EA;
+}
+.main-section .main-header .generated-password--container .copy-icon {
+  width: 18px;
+  height: 20px;
+  fill: #A4FFAF;
+  cursor: pointer;
+}
+.main-section .password-generator--form {
+  background-color: #24232C;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.main-section .password-generator--form .fieldset-range {
+  margin-bottom: 32px;
+}
+.main-section .password-generator--form .fieldset-range legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 7px;
+}
+.main-section .password-generator--form .fieldset-range legend p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.main-section .password-generator--form .fieldset-range legend p:last-child {
+  color: #A4FFAF;
+  font-size: 24px;
+}
+.main-section .password-generator--form .fieldset-range #inp-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #18171F;
+}
+.main-section .password-generator--form .fieldset-range #inp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #E6E5EA;
+  cursor: pointer;
+  margin-top: -6px;
+}
+.main-section .password-generator--form .fieldset-range #inp-range::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #E6E5EA;
+  cursor: pointer;
+  margin-top: -6px;
+}
+.main-section .password-generator--form .fieldset-range #inp-range::-ms-thumb {
+  -ms-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #E6E5EA;
+  cursor: pointer;
+  margin-top: -6px;
+}
+.main-section .password-generator--form .fieldset-range #inp-range::-webkit-slider-runnable-track {
+  height: 8px;
+  background: transparent;
+}
+.main-section .password-generator--form .fieldset-checkbox {
+  text-align: left;
+  margin-bottom: 32px;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox:last-child {
+  margin: 0px;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: 2px solid #E6E5EA;
+  box-sizing: border-box;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #A4FFAF;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 8px;
+  height: 3px;
+  left: 0;
+  top: 0;
+  border-bottom: 2px solid #24232C;
+  border-left: 2px solid #24232C;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  display: none;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox:checked {
+  border: none;
+}
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox:checked::after,
+.main-section .password-generator--form .fieldset-checkbox .label-checkbox .inp-checkbox:checked::before {
+  display: block;
+}
+.main-section .password-generator--form .password-strength--container {
+  width: 100%;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #18171F;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.main-section .password-generator--form .password-strength--container legend {
+  font-size: 16px;
+  color: #817D92;
+}
+.main-section .password-generator--form .password-strength--container .strength-indicator--container {
+  display: inherit;
+  gap: 16px;
+  align-items: center;
+}
+.main-section .password-generator--form .password-strength--container .strength-indicator--container b {
+  font-size: 18px;
+}
+.main-section .password-generator--form .password-strength--container .strength-indicator--container .fieldset-checkbox--strength {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.main-section .password-generator--form .password-strength--container .strength-indicator--container .fieldset-checkbox--strength .inp-checkbox--strength {
+  width: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  width: 10px;
+  height: 20px;
+  background-color: #F8CD65;
+  margin: 0;
+}
+.main-section .btn-submit {
+  width: 100%;
+  height: 56px;
+  background: #A4FFAF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.main-section .btn-submit span {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #24232C;
+}
+
+/*# sourceMappingURL=style.css.map */

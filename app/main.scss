@@ -1,0 +1,38 @@
+
+
+
+
+@font-face {
+    font-family: 'JetBrains Mono', sans-serif;
+    src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+///   color variables;
+
+$color--grey: #24232C;
+$color--light-grey: #817D92;
+$color--white: #E6E5EA;
+$color--dark-grey: #18171F;
+$color--neon-green: #A4FFAF;
+$color--red: #F64A4A;
+$color--orange: #FB7C58;
+$color--yellow: #F8CD65;
+
+
+
+
+////  font variable;
+
+$mainFont: 'JetBrains Mono', sans-serif;
+
+
+
+
+
+body {
+ background-color: $color--dark-grey;
+}
