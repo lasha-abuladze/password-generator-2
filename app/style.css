@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "JetBrains Mono", sans-serif;
-  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf) format("truetype");
+  font-family: "JetBrains Mono";
+  src: url(../assets/fonts/JetBrainsMono-VariableFont_wght.ttf) format("truetype");
   font-weight: 100 800;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 body {
   background-color: #18171F;
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: "JetBrains Mono", sans-serif, sans-serif;
   font-size: 16px;
   color: #E6E5EA;
   font-weight: 400;
@@ -54,6 +54,43 @@ body .main-section .form--password-generator .container--password .container--ic
   color: #A4FFAF;
 }
 body .main-section .form--password-generator .container--password .container--icon-copy .icon-copy {
+  cursor: pointer;
+}
+body .main-section .form--password-generator .container--form-inputs {
+  background-color: rgba(129, 125, 146, 0.3);
+  padding: 18px 22px;
+  box-sizing: border-box;
+}
+body .main-section .form--password-generator .container--form-inputs .container--input-range .label--inp-range {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+body .main-section .form--password-generator .container--form-inputs .container--input-range .label--inp-range .span--character-length {
+  color: #A4FFAF;
+  font-size: 18px;
+}
+body .main-section .form--password-generator .container--form-inputs .container--input-range #inp-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  height: 8px;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+body .main-section .form--password-generator .container--form-inputs .container--input-range #inp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #E6E5EA;
+  border: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
