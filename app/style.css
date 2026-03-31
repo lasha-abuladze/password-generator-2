@@ -5,9 +5,56 @@
   font-style: normal;
   font-display: swap;
 }
+.display-none {
+  display: none;
+}
+
 body {
-  background-color: #817D92;
-  font-size: 20px;
+  background-color: #18171F;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 16px;
+  color: #E6E5EA;
+  font-weight: 400;
+  text-align: center;
+}
+body .main-section {
+  padding: 65px 16px;
+  box-sizing: border-box;
+}
+body .main-section .app-name {
+  color: #817D92;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+body .main-section .form--password-generator .container--password {
+  background-color: rgba(129, 125, 146, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  color: #E6E5EA;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+body .main-section .form--password-generator .container--password .password {
+  letter-spacing: 1px;
+  cursor: copy;
+}
+body .main-section .form--password-generator .container--password .container--icon-copy {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+body .main-section .form--password-generator .container--password .container--icon-copy .span--copied {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #A4FFAF;
+}
+body .main-section .form--password-generator .container--password .container--icon-copy .icon-copy {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

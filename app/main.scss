@@ -30,10 +30,81 @@ $color--yellow: #F8CD65;
 $mainFont: 'JetBrains Mono', sans-serif;
 
 
+@mixin flex-row() {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@mixin flex-column() {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display-none {
+    display: none;
+}
 
 
 
 body {
- background-color: $color--light-grey;
- font-size: 20px;
+ background-color: $color--dark-grey;
+
+ font-family: $mainFont;
+ font-size: 16px;
+ color: $color--white;
+ font-weight: 400;
+
+
+ text-align: center;
+
+ .main-section {
+
+    padding: 65px 16px;
+    box-sizing: border-box;
+
+    .app-name {
+        color: $color--light-grey;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .form--password-generator {
+
+        .container--password {
+            background-color: rgba($color--light-grey, 0.3);
+            // opacity: 0.3;
+            @include flex-row();
+            justify-content: space-between;
+
+            padding: 18px 22px;
+            box-sizing: border-box;
+            color: $color--white;
+            font-size: 18px;
+            margin-bottom: 16px;
+
+            .password {
+                letter-spacing: 1px;
+                cursor: copy;
+            }
+
+            .container--icon-copy {
+                @include flex-row();
+                gap: 8px;
+
+                .span--copied {
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    color: $color--neon-green;
+                }
+
+                .icon-copy {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+ }
+
 }
