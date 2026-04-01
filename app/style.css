@@ -105,7 +105,8 @@ body .main-section .form--password-generator .container--form-inputs .container-
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 24px;
+  gap: 15px;
+  cursor: pointer;
 }
 body .main-section .form--password-generator .container--form-inputs .container--input-checkbox .label--inp-checkbox .inp-checkbox {
   position: relative;
@@ -144,10 +145,61 @@ body .main-section .form--password-generator .container--form-inputs .container-
   border-left: 2px solid #18171F;
   border-bottom: 2px solid #18171F;
   z-index: 2;
-  left: 6px;
+  left: 5px;
   top: 6px;
   transform: rotate(-45deg);
   box-sizing: border-box;
+}
+body .main-section .form--password-generator .container--form-inputs .container--password-strength {
+  background-color: #18171F;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 21PX 17PX;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: #817D92;
+  font-weight: 600;
+}
+body .main-section .form--password-generator .container--form-inputs .container--password-strength .container--strength {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+body .main-section .form--password-generator .container--form-inputs .container--password-strength .container--strength .span--strength-level {
+  color: #E6E5EA;
+}
+body .main-section .form--password-generator .container--form-inputs .container--password-strength .container--strength .squers {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+body .main-section .form--password-generator .container--form-inputs .container--password-strength .container--strength .squers .squer {
+  width: 10px;
+  height: 24px;
+  border: 1px solid #E6E5EA;
+  box-sizing: border-box;
+}
+body .main-section .form--password-generator .container--form-inputs .btn--generate-password {
+  width: 100%;
+  height: 56px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #A4FFAF;
+  color: #18171F;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
 }
 
 /*# sourceMappingURL=style.css.map */
