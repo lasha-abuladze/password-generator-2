@@ -72,6 +72,9 @@ body {
 
     .form--password-generator {
 
+        max-width: 540px;
+        margin: auto;
+
         .container--password {
             background-color: rgba($color--light-grey, 0.3);
             // opacity: 0.3;
@@ -101,6 +104,12 @@ body {
 
                 .icon-copy {
                     cursor: pointer;
+                    fill: $color--neon-green;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        fill: $color--white;
+                    }
                 }
             }
         }
@@ -144,11 +153,18 @@ body {
                     appearance: none;
                     // margin-top: -10px;
                     background-color: $color--white;
-                    border: none;
+                    border: 2px solid $color--white;
+                    box-sizing: border-box;
                     height: 28px;
                     width: 28px;
                     border-radius: 50%;
                     cursor: pointer;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        background-color: $color--dark-grey;
+                        border: 2px solid $color--neon-green;
+                    }
                 }
 
             }
@@ -251,7 +267,8 @@ body {
             .btn--generate-password {
                 width: 100%;
                 height: 56px;
-                border: none;
+                border: 2px solid $color--neon-green;
+                box-sizing: border-box;
                 outline: none;
                 cursor: pointer;
                 
@@ -266,6 +283,22 @@ body {
                 @include flex-row();
                 justify-content: center;
                 gap: 6px;
+
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: $color--dark-grey;
+                    color: $color--neon-green;
+
+                    .icon-arrow {
+                        fill: $color--neon-green;
+                    }
+                }
+
+                .icon-arrow {
+                    fill: $color--dark-grey;
+                    transition: all 0.2s;
+                }
             }
         }
     }
