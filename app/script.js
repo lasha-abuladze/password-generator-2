@@ -58,6 +58,12 @@ const getRandomUppercaseLetter = () => {
 };
 
 
+
+const  functions = [getRandomUppercaseLetter, getRandomLowercaseLetter, getRandomNumber, getRandomSymbol]
+
+
+
+
 btnSubmit.addEventListener(`click`, function(e) {
     e.preventDefault();
 
@@ -70,10 +76,21 @@ btnSubmit.addEventListener(`click`, function(e) {
         }
     })
 
+
     for(let l = 0; l < passwordLength; l++) {
-        passwordLetters.push(`x`)
+        let randomFunction = Math.floor(Math.random() * characterTypes.length);
+
+        functions.forEach(el => {
+            if(el.name.includes(characterTypes[randomFunction])) {
+                passwordLetters.push(el())
+            }
+        })
     }
 
-    console.log(passwordLetters)
+
+
+    console.log(passwordLetters);
+    console.log(passwordLength);
+    console.log(characterTypes);
 })
 
