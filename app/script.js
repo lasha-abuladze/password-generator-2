@@ -11,6 +11,8 @@ const passwordText = document.querySelector(`.password`);
 
 const btnCopy = document.querySelector(`.icon-copy`);
 const spanCopied = document.querySelector(`.span--copied`);
+const passwordStrength = document.querySelector(`.span--strength-level`);
+const strengthSquers = document.querySelectorAll(`.squer`);
 
 
 
@@ -31,6 +33,7 @@ class AppPasswordGenerator {
         this.#submitForm();
         this.#updateSlider();
         this.#attachCopyListener();
+        this.#checkPasswordStrength();
         this.#functions = [this.#getRandomUppercaseLetter, this.#getRandomLowercaseLetter, this.#getRandomNumber, this.#getRandomSymbol]
     };
 
@@ -63,7 +66,7 @@ class AppPasswordGenerator {
         btnSubmit.addEventListener(`click`, (e) => {
             e.preventDefault();
 
-            if(!spanCopied.classList.contains(`.display-none`)) {
+            if(!spanCopied.classList.contains(`display-none`)) {
                 spanCopied.classList.add(`display-none`);
             }
 
@@ -85,6 +88,7 @@ class AppPasswordGenerator {
             inpRange.value = 10;
             this.#updateSliderBackground();
             this.#qwe();
+            this.#characterTypes = [];
             inpCheckboxArr.forEach(el => el.checked = false)
 
         })
@@ -143,6 +147,65 @@ class AppPasswordGenerator {
             this.#copyToClipboard();
             spanCopied.classList.remove(`display-none`);
         });
+    }
+
+    #checkPasswordStrength() {
+
+        inpCheckboxArr.forEach(el => {
+
+            el.addEventListener(`input`, () => {
+
+                this.#getCharacterTypes();
+                strengthSquers.forEach(el => {
+                    el.style.background = `none`;
+                    el.style.border = `1px solid #E6E5EA`;
+                })
+
+                switch (this.#characterTypes.length) {
+                    case 1:
+
+                        passwordStrength.textContent = `too weak!`;
+                        for(let s = 0; s < this.#characterTypes.length; s++) {
+                            strengthSquers[s].style.backgroundColor = `#F64A4A`;
+                            strengthSquers[s].style.border = `1px solid #F64A4A`;
+                        }
+                        
+                        break;
+                    case 2:
+
+                        passwordStrength.textContent = `week`;
+                        for(let s = 0; s < this.#characterTypes.length; s++) {
+                            strengthSquers[s].style.backgroundColor = `#FB7C58`;
+                            strengthSquers[s].style.border = `1px solid #FB7C58`;
+                        }
+
+                        break;
+                    case 3:
+
+                        passwordStrength.textContent = `medium`;
+                        for(let s = 0; s < this.#characterTypes.length; s++) {
+                            strengthSquers[s].style.backgroundColor = `#F8CD65`;
+                            strengthSquers[s].style.border = `1px solid #F8CD65`;
+                        }
+
+                        break;
+                    case 4:
+
+                        passwordStrength.textContent = `strong`;
+                        for(let s = 0; s < this.#characterTypes.length; s++) {
+                            strengthSquers[s].style.backgroundColor = `#A4FFAF`;
+                            strengthSquers[s].style.border = `1px solid #A4FFAF`;
+                        }
+                        
+                        break;
+                    default:
+                        passwordStrength.textContent = `too weak!`;
+                }
+
+                this.#characterTypes = [];
+            })
+
+        })
     }
 
     async #copyToClipboard() {
